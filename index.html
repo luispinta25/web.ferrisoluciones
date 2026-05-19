@@ -83,7 +83,9 @@
         "hasMap": "https://www.google.com/maps/place/Ferrisoluciones/@-0.5130465,-78.5689792,17z/data=!4m10!1m2!2m1!1sFerrisoluciones,+Luis+Cordero+N1-32+y+Jos%C3%A9+Mej%C3%ADa,+Machachi,+Ecuador!3m6!1s0x91d5a9a69b6078d3:0xd4c2fedf018cfd7e!8m2!3d-0.5126248!4d-78.568212!15sCkVGZXJyaXNvbHVjaW9uZXMsIEx1aXMgQ29yZGVybyBOMS0zMiB5IEpvc8OpIE1lasOtYSwgTWFjaGFjaGksIEVjdWFkb3JaRCJCZmVycmlzb2x1Y2lvbmVzIGx1aXMgY29yZGVybyBuMSAzMiB5IGpvc8OpIG1lasOtYSBtYWNoYWNoaSBlY3VhZG9ykgEKdG9vbF9zdG9yZZoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VRdGFHOUhPVXRuRUFF4AEA-gEECAAQHA!16s%2Fg%2F11hr_0ch2m?entry=ttu",
         "sameAs": [
           "https://www.google.com/maps/place/Ferrisoluciones/@-0.5130465,-78.5689792,17z/data=!4m10!1m2!2m1!1sFerrisoluciones,+Luis+Cordero+N1-32+y+Jos%C3%A9+Mej%C3%ADa,+Machachi,+Ecuador!3m6!1s0x91d5a9a69b6078d3:0xd4c2fedf018cfd7e!8m2!3d-0.5126248!4d-78.568212!15sCkVGZXJyaXNvbHVjaW9uZXMsIEx1aXMgQ29yZGVybyBOMS0zMiB5IEpvc8OpIE1lasOtYSwgTWFjaGFjaGksIEVjdWFkb3JaRCJCZmVycmlzb2x1Y2lvbmVzIGx1aXMgY29yZGVybyBuMSAzMiB5IGpvc8OpIG1lasOtYSBtYWNoYWNoaSBlY3VhZG9ykgEKdG9vbF9zdG9yZZoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VRdGFHOUhPVXRuRUFF4AEA-gEECAAQHA!16s%2Fg%2F11hr_0ch2m?entry=ttu",
-          "https://wa.me/593962248046"
+          "https://wa.me/593962248046",
+          "https://www.facebook.com/ferrisoluciones",
+          "https://www.tiktok.com/@ferrisoluciones"
         ]
       }
     </script>
@@ -405,6 +407,53 @@
         font-weight: 850;
       }
 
+      .social-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-top: clamp(24px, 4vw, 40px);
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        background: rgba(17, 16, 13, 0.6);
+      }
+
+      .social-bar p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 42px;
+        padding: 0 16px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--white);
+        font-size: 0.88rem;
+        font-weight: 800;
+        text-decoration: none;
+        transition: background 180ms ease, transform 180ms ease;
+      }
+
+      .social-link:hover {
+        background: rgba(255, 255, 255, 0.13);
+        transform: translateY(-2px);
+      }
+
+      .social-link.fb { border-color: rgba(24, 119, 242, 0.45); }
+      .social-link.fb:hover { background: rgba(24, 119, 242, 0.15); }
+      .social-link.tt { border-color: rgba(255, 255, 255, 0.28); }
+      .social-link.tt:hover { background: rgba(255, 255, 255, 0.1); }
+
       .location {
         display: grid;
         grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
@@ -619,6 +668,18 @@
           <span>Ubicación</span>
           <span>Contacto</span>
         </nav>
+
+        <div class="social-bar" aria-label="Redes sociales de Ferrisoluciones">
+          <p>Síguenos</p>
+          <a class="social-link fb" href="https://www.facebook.com/ferrisoluciones" rel="noopener" target="_blank" aria-label="Ferrisoluciones en Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.265h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+            Facebook
+          </a>
+          <a class="social-link tt" href="https://www.tiktok.com/@ferrisoluciones" rel="noopener" target="_blank" aria-label="Ferrisoluciones en TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+            TikTok
+          </a>
+        </div>
       </div>
     </main>
   </body>
